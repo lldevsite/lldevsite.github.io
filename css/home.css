@@ -1,0 +1,63 @@
+#wave1 {
+    position: absolute;
+    z-index: -1;
+    top: 52vh;
+    left: 0;
+    animation: flow1 36s ease-in-out infinite;
+}
+
+#wave2 {
+    position: absolute;
+    z-index: -1;
+    top: 57vh;
+    animation: flow1 18.5s ease-in-out infinite;
+    animation-delay: -3s;
+}
+
+#wave3 {
+    position: absolute;
+    z-index: -1;
+    top: 58.5vh;
+    animation: flow1 17s ease-in-out infinite;
+    animation-delay: -6s;
+}
+
+.top-section {
+    height: 100vh;
+    backdrop-filter: blur(8px);
+}
+
+#logo {
+    position: relative;
+    top: 32vh;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+
+@keyframes flow1 {
+    0% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(-35%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes flow2 {
+    0% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(35%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
