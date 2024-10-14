@@ -1,22 +1,28 @@
-#wave1 {
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#wave1,
+#wave2,
+#wave3 {
     position: absolute;
     z-index: -1;
+}
+
+#wave1 {
     top: 52vh;
-    left: 0;
     animation: flow1 36s ease-in-out infinite;
 }
 
 #wave2 {
-    position: absolute;
-    z-index: -1;
     top: 57vh;
     animation: flow1 18.5s ease-in-out infinite;
     animation-delay: -3s;
 }
 
 #wave3 {
-    position: absolute;
-    z-index: -1;
     top: 58.5vh;
     animation: flow1 17s ease-in-out infinite;
     animation-delay: -6s;
@@ -34,6 +40,10 @@
     transform: translateX(-50%);
 }
 
+.path-container {
+    padding: 40px 0;
+}
+
 @keyframes flow1 {
     0% {
         transform: translateX(0%);
@@ -47,17 +57,3 @@
         transform: translateX(0%);
     }
 }
-@keyframes flow2 {
-    0% {
-        transform: translateX(0%);
-    }
-
-    50% {
-        transform: translateX(35%);
-    }
-
-    100% {
-        transform: translateX(0%);
-    }
-}
-
