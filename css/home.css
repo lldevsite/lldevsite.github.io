@@ -41,7 +41,45 @@ body {
 }
 
 .path-container {
-    padding: 40px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.path-section {
+    appearance: none;
+    display: flex;
+    align-items: flex-start;
+    width: 900px;
+    height: calc((536 / 2138) * 1400px);
+    opacity: 0;
+    /*h-figma / h-svg-figma * h-svg-sito */
+}
+
+.path-text {
+    width: 400px;
+    
+
+    p {
+        text-align: justify;
+    }
+}
+
+.slide-from-right{
+    opacity: 100%;
+    animation: slaa-r 0.5s ease-out;
+}
+.slide-from-left{
+    opacity: 100%;
+    animation: slaa-l 0.5s ease-out;
+}
+
+#path {
+    position: absolute;
+    padding: 10px 0;
+    top: 0;
 }
 
 @keyframes flow1 {
@@ -58,4 +96,19 @@ body {
     }
 }
 
-/*prova*/
+@keyframes slaa-r {
+    0%{
+        transform: translateX(1000px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes slaa-l {
+    0%{
+        transform: translateX(-1000px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
