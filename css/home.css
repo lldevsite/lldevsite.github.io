@@ -60,26 +60,89 @@ body {
 
 .path-text {
     width: 400px;
-    
+
 
     p {
         text-align: justify;
     }
 }
 
-.slide-from-right{
-    opacity: 100%;
-    animation: slaa-r 0.5s ease-out;
-}
-.slide-from-left{
-    opacity: 100%;
-    animation: slaa-l 0.5s ease-out;
+.appear-on-screen {
+    animation: transparency-in 0.8s forwards;
 }
 
 #path {
     position: absolute;
     padding: 10px 0;
     top: 0;
+}
+
+#path>path,
+#path>g {
+    opacity: 0%;
+}
+
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 300px;
+}
+
+.contact-btn-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.img-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.img-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    padding: 40px 100px;
+    box-sizing: border-box;
+    p {
+        text-align: justify;
+        padding: 35px 40px;
+        box-sizing: border-box;
+    }
+    h1{
+        text-align: center;
+    }
+}
+
+.img-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: gainsboro;
+}
+
+.img-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @keyframes flow1 {
@@ -96,19 +159,46 @@ body {
     }
 }
 
+
+@keyframes transparency-in {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+
+/* NON PIU USATA */
+
+.slide-from-right {
+    opacity: 100%;
+    animation: slaa-r 0.5s ease-out;
+}
+
+.slide-from-left {
+    opacity: 100%;
+    animation: slaa-l 0.5s ease-out;
+}
+
 @keyframes slaa-r {
-    0%{
+    0% {
         transform: translateX(1000px);
     }
-    100%{
+
+    100% {
         transform: translateX(0px);
     }
 }
+
 @keyframes slaa-l {
-    0%{
+    0% {
         transform: translateX(-1000px);
     }
-    100%{
+
+    100% {
         transform: translateX(0px);
     }
 }
