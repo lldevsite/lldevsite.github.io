@@ -28,6 +28,18 @@ p {
     padding: 14px 0;
 }
 
+button{
+    all: unset;
+    border: 2px solid #022954;
+    border-radius: 8px;
+    padding: 10px 60px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 17px;
+    color: #022954;
+    cursor: pointer;
+}
+
 /* GLOBAL CLASSES */
 .center {
     display: flex;
@@ -47,10 +59,17 @@ p {
     justify-content: flex-start;
 }
 
+.row-reverse{
+    flex-direction: row-reverse;
+}
+
 .text-to-right{
     text-align: end;
 }
 
+.spacer{
+    height: 100px;
+}
 
 /* FOOTER */
 footer {
