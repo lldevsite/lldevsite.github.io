@@ -202,11 +202,49 @@ li {
     background-image: url(../svg/cross.svg);
 }
 
+
 .hosting-section{
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 70px 0;
+}
+
+.portfolio-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.portfolio-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 300px;
+    border-radius: 8px;
+    background-size: 100% auto;
+    
+}
+
+.card-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(6px);
 }
 
 
