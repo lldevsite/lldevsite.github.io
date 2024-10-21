@@ -20,6 +20,21 @@ h1 {
     font-size: 28px;
 }
 
+h2 {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+h3 {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+}
+
 p {
     font-family: 'Open Sans';
     font-style: normal;
@@ -28,7 +43,7 @@ p {
     padding: 14px 0;
 }
 
-button{
+button {
     all: unset;
     display: flex;
     align-items: center;
@@ -64,20 +79,22 @@ button{
     justify-content: flex-start;
 }
 
-.row-reverse{
+.row-reverse {
     flex-direction: row-reverse;
 }
 
-.text-to-right{
+.text-to-right {
     text-align: end;
 }
 
-.spacer{
+.spacer {
     height: 100px;
 }
 
 /* FOOTER */
 footer {
+    overflow: hidden;
+
     p {
         padding: 10px 0;
     }
@@ -85,6 +102,13 @@ footer {
     svg {
         padding: 10px 0;
     }
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
 }
 
 .outgoing-links {
