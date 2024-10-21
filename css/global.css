@@ -35,12 +35,26 @@ h3 {
     font-size: 12px;
 }
 
+h6{
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+text-decoration-line: underline;
+color: #022954;
+}
+
 p {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     padding: 14px 0;
+}
+
+a{
+    all: unset;
+    cursor: pointer;
 }
 
 button {
