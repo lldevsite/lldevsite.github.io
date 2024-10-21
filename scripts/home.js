@@ -1,6 +1,5 @@
 window.onload = function () {
-    load('footer.html', 'footer')
-
+    load('./components/footer.html', 'footer');
 
 
 
