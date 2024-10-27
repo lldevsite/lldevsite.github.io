@@ -226,13 +226,16 @@ li {
 }
 
 .card-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    position: relative;
+    width: 900px;
+    height: 400px;
 }
 
 .card{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -240,7 +243,7 @@ li {
     width: 300px;
     border-radius: 8px;
     background-size: 100% auto;
-    
+    transition: ease-in-out 0.4s;
 }
 
 .card-img{
@@ -252,6 +255,26 @@ li {
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(6px);
+}
+
+.left-el{
+    transform-origin: center;
+    transform: translate(-80%, 5%);
+    z-index: -1;
+}
+
+.right-el{
+    transform-origin: center;
+    transform: translate(80%, 5%);
+    z-index: -1;
+}
+
+.fadeout{
+    animation: transparency-in 0.4s reverse forwards;
+}
+
+.fadein{
+    animation: transparency-in 0.4s forwards;
 }
 
 
