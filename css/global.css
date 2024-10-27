@@ -105,6 +105,10 @@ button {
     height: 100px;
 }
 
+.transparent{
+    opacity: 0%;
+}
+
 /* FOOTER */
 footer {
     overflow: hidden;
