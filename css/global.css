@@ -109,6 +109,14 @@ button {
     opacity: 0%;
 }
 
+.zindex6{
+    z-index: 6 !important; 
+}
+.zindex5{
+    z-index: 5 !important; 
+}
+
+
 /* FOOTER */
 footer {
     overflow: hidden;

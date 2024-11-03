@@ -154,7 +154,8 @@ body {
     flex-direction: column;
     padding: 60px 0;
     gap: 20px;
-    h1{
+
+    h1 {
         padding: 10px;
     }
 }
@@ -203,14 +204,14 @@ li {
 }
 
 
-.hosting-section{
+.hosting-section {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 70px 0;
 }
 
-.portfolio-section{
+.portfolio-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -218,20 +219,23 @@ li {
     gap: 40px;
 }
 
-.portfolio-container{
+.portfolio-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 30px;
+    .arrows{
+        cursor: pointer;
+    }
 }
 
-.card-container{
+.card-container {
     position: relative;
     width: 900px;
     height: 400px;
 }
 
-.card{
+.card {
     position: absolute;
     left: 0;
     right: 0;
@@ -243,10 +247,10 @@ li {
     width: 300px;
     border-radius: 8px;
     background-size: 100% auto;
-    transition: ease-in-out 0.4s;
+    transition: transform 0.3s ease-out;
 }
 
-.card-img{
+.card-img {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -257,24 +261,36 @@ li {
     backdrop-filter: blur(6px);
 }
 
-.left-el{
+.left-el {
     transform-origin: center;
     transform: translate(-80%, 5%);
     z-index: -1;
 }
 
-.right-el{
+.left-left-el {
+    transform-origin: center;
+    transform: translate(-80%, 5%);
+    z-index: -2;
+}
+
+.right-el {
     transform-origin: center;
     transform: translate(80%, 5%);
     z-index: -1;
 }
 
-.fadeout{
-    animation: transparency-in 0.4s reverse forwards;
+.right-right-el {
+    transform-origin: center;
+    transform: translate(80%, 5%);
+    z-index: -2;
 }
 
-.fadein{
-    animation: transparency-in 0.4s forwards;
+.fadeout {
+    animation: transparency-in 0.3s reverse forwards;
+}
+
+.fadein {
+    animation: transparency-in 0.3s forwards;
 }
 
 
