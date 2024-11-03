@@ -1,86 +1,69 @@
-let showcase = ['coffeecultures.it', 'steagritech.it', 'rampollo.com', 'coffeecultures.it', 'steagritech.it'];
+let showcase = ['rampollo.com', 'studio22mq.it', 'steagritech.it', 'coffeecultures.it', 'steagritech.it'];
+let urls = ['https://ranpollo.com/', 'https://loryy9.github.io/studio_22mq/', 'https://www.steagritech.it/', 'https://coffeecultures.it/', 'https://www.steagritech.it/'];
 let index = 2;
 
 window.onload = function () {
     load('./components/footer.html', 'footer');
 
-
-    // load cards
-    for (let i = 0; i < 5; i++) {
-        switch (i) {
-            case 0:
-                load('../components/card.html', 'card-container', { 'name': showcase[i], 'class': 'left-el transparent' });
-                break;
-            case 1:
-                load('../components/card.html', 'card-container', { 'name': showcase[i], 'class': 'left-el' });
-                break;
-            case 2:
-                load('../components/card.html', 'card-container', { 'name': showcase[i], 'class': '' });
-                break;
-            case 3:
-                load('../components/card.html', 'card-container', { 'name': showcase[i], 'class': 'right-el' });
-                break;
-            case 4:
-                load('../components/card.html', 'card-container', { 'name': showcase[i], 'class': 'right-el transparent' });
-                break;
-            default:
-                break;
-        }
-    }
+    // document.getElementById('card-container').addEventListener('touchstart', function () {
+    //     console.log('scrolle')
+    //     document.getElementById('btn-right').click();
+    // });
 
     document.getElementById('btn-right').addEventListener('click', function () {
+        let c = document.getElementsByClassName('card');
 
-        document.getElementsByClassName('card')[2].classList.add('left-el');
-        document.getElementsByClassName('card')[3].classList.remove('right-el');
+        c[1].classList.remove('left-el');
+        c[1].classList.add('left-left-el');
 
-        document.getElementsByClassName('card')[4].classList.remove('transparent');
-        document.getElementsByClassName('card')[4].classList.add('fadein');
+        c[4].classList.remove('right-right-el');
+        c[4].classList.remove('transparent');
+        c[4].classList.add('right-el');
+        c[4].classList.add('fadein');
 
+        c[3].classList.remove('right-el');
 
-        document.getElementsByClassName('card')[4].addEventListener('animationend', function () {
-            document.getElementsByClassName('card')[4].classList.remove('fadein');
-            document.getElementsByClassName('card')[1].classList.add('transparent');
-            document.getElementsByClassName('card')[0].remove();
+        c[2].classList.add('left-el');
+
+        c[4].addEventListener('animationend', function () {
+            c[4].classList.remove('fadein');
+            c[1].classList.add('transparent');
+            c[0].remove();
 
             let toload = (index + 3) % showcase.length;
             index = (index + 1) % showcase.length;
 
-            console.log(toload + '   ' + index)
-
-
-            load('../components/card.html', 'card-container', { 'name': showcase[toload], 'class': 'right-el transparent' });
+            load('../components/card.html', 'card-container', { 'name': showcase[toload], 'class': 'right-el transparent', 'url': urls[toload] });
         });
-
-
     });
 
     document.getElementById('btn-left').addEventListener('click', function () {
 
-        document.getElementsByClassName('card')[2].classList.add('right-el');
-        document.getElementsByClassName('card')[1].classList.remove('left-el');
-        
-        document.getElementsByClassName('card')[0].classList.remove('transparent');
-        document.getElementsByClassName('card')[0].classList.add('fadein');
-        
-        document.getElementsByClassName('card')[0].addEventListener('animationend', function () {
-            document.getElementsByClassName('card')[0].classList.remove('fadein');
-            document.getElementsByClassName('card')[3].classList.add('transparent');
-            document.getElementsByClassName('card')[4].remove();
+        let c = document.getElementsByClassName('card');
+
+        c[3].classList.remove('right-el');
+        c[3].classList.add('right-right-el');
+
+        c[0].classList.remove('left-left-el');
+        c[0].classList.remove('transparent');
+        c[0].classList.add('left-el');
+        c[0].classList.add('fadein');
+
+        c[1].classList.remove('left-el');
+
+        c[2].classList.add('right-el');
+
+        c[0].addEventListener('animationend', function () {
+            c[0].classList.remove('fadein');
+            c[3].classList.add('transparent');
+            c[4].remove();
 
             let toload = (index - 3 + showcase.length) % showcase.length;
             index = (index - 1 + showcase.length) % showcase.length;
 
-
-            console.log(toload + '   ' + index)
-
-
             loadInFront('../components/card.html', 'card-container', { 'name': showcase[toload], 'class': 'left-el transparent' });
         });
-
-
     });
-
-
 }
 
 window.addEventListener('scroll', function () {
