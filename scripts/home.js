@@ -44,9 +44,9 @@ window.onload = function () {
 
         c[1].classList.remove('left-el');
         c[1].classList.add('left-left-el');
+        c[1].classList.add('fadeout');
 
         c[4].classList.remove('right-right-el');
-        c[4].classList.remove('transparent');
         c[4].classList.add('right-el');
         c[4].classList.add('fadein');
 
@@ -57,26 +57,25 @@ window.onload = function () {
         c[2].classList.remove('center-el');
 
         c[4].addEventListener('animationend', function () {
+            c[1].classList.remove('fadeout');
             c[4].classList.remove('fadein');
-            c[1].classList.add('transparent');
             c[0].remove();
 
             let toload = (index + 3) % showcase.length;
             index = (index + 1) % showcase.length;
 
-            load('../components/card.html', 'card-container', { 'name': showcase[toload].name, 'class': 'right-el transparent', 'url': showcase[toload].url, 'type' : showcase[toload].type });
+            load('../components/card.html', 'card-container', { 'name': showcase[toload].name, 'class': 'right-right-el', 'url': showcase[toload].url, 'type': showcase[toload].type });
         });
     });
 
     document.getElementById('btn-left').addEventListener('click', function () {
-
         let c = document.getElementsByClassName('card');
 
         c[3].classList.remove('right-el');
         c[3].classList.add('right-right-el');
+        c[3].classList.add('fadeout');
 
         c[0].classList.remove('left-left-el');
-        c[0].classList.remove('transparent');
         c[0].classList.add('left-el');
         c[0].classList.add('fadein');
 
@@ -87,14 +86,14 @@ window.onload = function () {
         c[2].classList.remove('center-el');
 
         c[0].addEventListener('animationend', function () {
+            c[3].classList.remove('fadeout');
             c[0].classList.remove('fadein');
-            c[3].classList.add('transparent');
             c[4].remove();
 
             let toload = (index - 3 + showcase.length) % showcase.length;
             index = (index - 1 + showcase.length) % showcase.length;
 
-            loadInFront('../components/card.html', 'card-container', { 'name': showcase[toload].name, 'class': 'left-el transparent', 'url': showcase[toload].url, 'type' : showcase[toload].type });
+            loadInFront('../components/card.html', 'card-container', { 'name': showcase[toload].name, 'class': 'left-left-el', 'url': showcase[toload].url, 'type': showcase[toload].type });
         });
     });
 }
