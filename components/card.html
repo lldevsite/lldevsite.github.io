@@ -1,6 +1,8 @@
 <div class="card ${obj.class}" style="background-image: url(../images/${obj.name}.png);">
-    <div class="card-img">
-        <h3>${obj.type}</h3>
-        <h6><a href="${obj.url}" target="_blank">${obj.name}</a></h6>
-    </div>
+    <a href="${obj.url}" target="_blank">
+        <div class="card-img">
+            <h3>${obj.type}</h3>
+            <h6>${obj.name}</h6>
+        </div>
+    </a>
 </div>

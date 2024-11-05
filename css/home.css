@@ -32,7 +32,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: 100vh;
     backdrop-filter: blur(8px);
 
@@ -248,7 +248,12 @@ li {
     width: 300px;
     border-radius: 8px;
     background-size: 100% auto;
-    transition: transform 0.3s ease-out;
+    transition: transform 0.2s ease-out;
+
+    a {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .card-img {
@@ -262,48 +267,50 @@ li {
     height: 100%;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.4);
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 50%);
     backdrop-filter: blur(6px);
 }
 
 .left-el {
     transform-origin: center;
-    transform: translate(-80%, 5%);
+    transform:scale(0.9) translate(-80%, 0%);
     z-index: -1;
 }
 
 .left-left-el {
     transform-origin: center;
-    transform: translate(-80%, 5%);
+    transform:scale(0.9) translate(-80%, 0%);
     z-index: -2;
+    opacity: 0;
 }
 
 .right-el {
     transform-origin: center;
-    transform: translate(80%, 5%);
+    transform:scale(0.9) translate(80%, 0%);
     z-index: -1;
 }
 
 .right-right-el {
     transform-origin: center;
-    transform: translate(80%, 5%);
+    transform:scale(0.9) translate(80%, 0%);
     z-index: -2;
+    opacity: 0;
 }
 
 .center-el {
     .card-img {
         background-color: transparent;
         background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0) 50%);
-        /* background: radial-gradient(circle at bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%); */
         backdrop-filter: blur(0px);
     }
 }
 
 .fadeout {
-    animation: transparency-in 0.3s reverse forwards;
+    animation: transparency-in 0.2s reverse forwards;
 }
 
 .fadein {
-    animation: transparency-in 0.3s forwards;
+    animation: transparency-in 0.2s forwards;
 }
 
 
@@ -463,19 +470,23 @@ li {
     }
 
     .left-left-el {
-        transform: translate(-60%, 10%);
+        transform: scale(0.9) translate(-15%, 0%);
+        /* transform: scale(0.9); */
     }
 
     .right-right-el {
-        transform: translate(60%, 10%);
+        transform: scale(0.9) translate(15%, 0%);
+        /* transform: scale(0.9); */
     }
 
     .left-el {
-        transform: translate(-60%, 10%);
+        transform: scale(0.9) translate(-15%, 0%);
+        /* transform: scale(0.9); */
     }
 
     .right-el {
-        transform: translate(60%, 10%);
+        transform: scale(0.9) translate(15%, 0%);
+        /* transform: scale(0.9); */
     }
 
     .portfolio-container {
@@ -491,9 +502,5 @@ li {
     .arrows {
         width: 40px;
         height: 40px;
-    }
-
-    .hosting-section {
-        padding-top: 100px;
     }
 }
