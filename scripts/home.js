@@ -22,8 +22,10 @@ window.onload = function () {
         c[4].classList.add('fadein');
 
         c[3].classList.remove('right-el');
+        c[3].classList.add('center-el');
 
         c[2].classList.add('left-el');
+        c[2].classList.remove('center-el');
 
         c[4].addEventListener('animationend', function () {
             c[4].classList.remove('fadein');
@@ -50,8 +52,10 @@ window.onload = function () {
         c[0].classList.add('fadein');
 
         c[1].classList.remove('left-el');
+        c[1].classList.add('center-el');
 
         c[2].classList.add('right-el');
+        c[2].classList.remove('center-el');
 
         c[0].addEventListener('animationend', function () {
             c[0].classList.remove('fadein');
