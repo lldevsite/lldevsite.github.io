@@ -2,6 +2,35 @@ let showcase = ['rampollo.com', 'studio22mq.it', 'steagritech.it', 'coffeecultur
 let urls = ['https://ranpollo.com/', 'https://loryy9.github.io/studio_22mq/', 'https://www.steagritech.it/', 'https://coffeecultures.it/', 'https://www.steagritech.it/'];
 let index = 2;
 
+showcase = [
+    {
+        'name': 'rampollo.com',
+        'url': 'https://ranpollo.com/',
+        'type': 'E-commerce'
+    },
+    {
+        'name': 'studio22mq.it',
+        'url': 'https://loryy9.github.io/studio_22mq/',
+        'type': 'Demo'
+    },
+    {
+        'name': 'steagritech.it',
+        'url': 'https://www.steagritech.it/',
+        'type': 'Landing page'
+    },
+    {
+        'name': 'coffeecultures.it',
+        'url': 'https://coffeecultures.it/',
+        'type': 'E-commerce'
+    },
+    {
+        'name': 'steagritech.it',
+        'url': 'https://www.steagritech.it/',
+        'type': 'Landing page'
+    }
+];
+
+
 window.onload = function () {
     load('./components/footer.html', 'footer');
 
@@ -35,7 +64,7 @@ window.onload = function () {
             let toload = (index + 3) % showcase.length;
             index = (index + 1) % showcase.length;
 
-            load('../components/card.html', 'card-container', { 'name': showcase[toload], 'class': 'right-el transparent', 'url': urls[toload] });
+            load('../components/card.html', 'card-container', { 'name': showcase[toload].name, 'class': 'right-el transparent', 'url': showcase[toload].url, 'type' : showcase[toload].type });
         });
     });
 
@@ -65,7 +94,7 @@ window.onload = function () {
             let toload = (index - 3 + showcase.length) % showcase.length;
             index = (index - 1 + showcase.length) % showcase.length;
 
-            loadInFront('../components/card.html', 'card-container', { 'name': showcase[toload], 'class': 'left-el transparent' });
+            loadInFront('../components/card.html', 'card-container', { 'name': showcase[toload].name, 'class': 'left-el transparent', 'url': showcase[toload].url, 'type' : showcase[toload].type });
         });
     });
 }
