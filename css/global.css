@@ -40,8 +40,8 @@ h6 {
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
-    text-decoration-line: underline;
-    color: #022954;
+    /* text-decoration-line: underline;
+    color: #022954; */
 }
 
 p {
